@@ -12,8 +12,8 @@ const CONFIG = {
   // While location is empty, a drawn map with "Location pin will be added soon" shows instead.
   // Optional `link`: a Google Maps share link (maps.app.goo.gl/...) for the button only.
   venues: {
-    mehndi:  { name: 'Canal Homes',    location: 'Canal Homes', link: 'https://www.google.com/maps/search/?api=1&query=Canal+Homes' },
-    shalima: { name: 'Lubaba Marquee', location: 'Lubaba Marquee', link: 'https://www.google.com/maps/search/?api=1&query=Lubaba+Marquee' },
+    mehndi:  { name: 'Canal Homes',    location: '30.8159375,73.4215625', link: 'https://maps.app.goo.gl/K9ncFjTE76ovcvWB9' },
+    shalima: { name: 'Lubaba Marquee', location: '30.8297265,73.4959468', link: 'https://maps.app.goo.gl/sA2DyD49abh244jL6' },
   },
 
   // Add real wedding photos here. With one image, arrows and dots hide automatically.
