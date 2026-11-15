@@ -38,6 +38,7 @@ let audio = null;
 if (CONFIG.music) {
   audio = new Audio(CONFIG.music);
   audio.loop = true;
+  audio.volume = 0.35;
   audio.preload = 'none';
   soundBtn.hidden = false;
   const setPlaying = on => {
