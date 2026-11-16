@@ -17,8 +17,8 @@ jobs:
       - name: Extract zip flat to repo root
         run: |
           unzip -o bilal-fatima-invitation.zip
-          cp -a bilal-fatima-invitation/. .
-          rm -rf bilal-fatima-invitation bilal-fatima-invitation.zip
+          if [ -d bilal-fatima-invitation ]; then cp -a bilal-fatima-invitation/. .; rm -rf bilal-fatima-invitation; fi
+          rm -f bilal-fatima-invitation.zip
           ls -la
       - name: Commit extracted files
         run: |
