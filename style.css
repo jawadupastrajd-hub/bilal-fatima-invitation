@@ -104,11 +104,10 @@ h2{font:500 clamp(25px,6.6vw,29px)/1.2 var(--serif);color:var(--espresso);letter
 .js body.opened .hero-photo{animation:heroSettle 2.6s var(--ease) forwards,heroBreath 24s 2.6s ease-in-out infinite alternate}
 .no-js .hero-photo{transform:none}
 .hero-veil{position:absolute;inset:0;z-index:-2;
-  background:
-    radial-gradient(ellipse 75% 55% at 50% 48%,rgba(255,255,255,.88) 0,rgba(255,255,255,.62) 55%,rgba(255,255,255,.18) 100%),
-    linear-gradient(180deg,rgba(255,255,255,.25),rgba(255,255,255,0) 30%,rgba(255,255,255,0) 75%,#fff 100%);
+  /* Photo keeps its original colours — only a soft fade at the very bottom edge */
+  background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,0) 78%,#fff 100%);
 }
-.hero-frame{position:relative;transform-origin:50% 0;width:100%;max-width:420px;padding:76px 22px 70px;border:1px solid rgba(189,152,87,.55);border-radius:18px;background:linear-gradient(155deg,rgba(255,255,255,.45),rgba(255,253,248,.16) 55%,rgba(255,255,255,.30));-webkit-backdrop-filter:blur(14px) saturate(1.3);backdrop-filter:blur(14px) saturate(1.3);box-shadow:0 20px 55px rgba(96,64,24,.20),inset 0 0 0 6px rgba(255,255,255,.45),inset 0 0 0 7px rgba(189,152,87,.28)}
+.hero-frame{position:relative;transform-origin:50% 0;width:100%;max-width:420px;padding:76px 22px 70px;border:4px solid var(--gold);border-radius:18px;background:linear-gradient(155deg,rgba(255,255,255,.45),rgba(255,253,248,.16) 55%,rgba(255,255,255,.30));-webkit-backdrop-filter:blur(14px) saturate(1.3);backdrop-filter:blur(14px) saturate(1.3);box-shadow:0 20px 55px rgba(96,64,24,.20),inset 0 0 0 6px rgba(255,255,255,.45),inset 0 0 0 7px rgba(189,152,87,.28)}
 .hero-frame .corner{width:40px;height:40px;top:-1px;left:-1px}
 .hero-frame .corner.tr{left:auto;right:-1px}
 .hero-frame .corner.bl{top:auto;bottom:-1px}
@@ -126,7 +125,7 @@ h2{font:500 clamp(25px,6.6vw,29px)/1.2 var(--serif);color:var(--espresso);letter
 .js body.opened .hero .a{animation:rise 1.25s var(--ease) var(--d,0s) forwards}
 .js body.opened .hero .name.a{animation:inkIn 1.6s var(--ease) var(--d,0s) forwards,goldShimmer 6s ease-in-out calc(var(--d,0s) + 2s) infinite}
 .js .hero-frame{opacity:0;clip-path:inset(50% 0 50% 0)}
-.js body.opened .hero-frame{animation:frameDraw 1.4s var(--ease-cine) .05s forwards,sway 7s ease-in-out 1.5s infinite alternate}
+.js body.opened .hero-frame{animation:frameDraw 1.4s var(--ease-cine) .05s forwards,sway 8s ease-in-out 1.5s infinite alternate}
 
 .sound{position:absolute;top:18px;right:16px;z-index:5;width:42px;height:42px;border-radius:50%;border:1px solid var(--gold-light);background:rgba(255,255,255,.85);backdrop-filter:blur(6px);color:var(--burgundy);cursor:pointer;display:grid;place-items:center}
 .bars{display:flex;align-items:flex-end;gap:2px;height:14px}
@@ -242,7 +241,7 @@ h2{font:500 clamp(25px,6.6vw,29px)/1.2 var(--serif);color:var(--espresso);letter
 @keyframes heroSettle{from{transform:scale(1.08)}to{transform:scale(1)}}
 @keyframes heroBreath{from{transform:scale(1)}to{transform:scale(1.045)}}
 @keyframes frameDraw{0%{opacity:0;clip-path:inset(50% 0 50% 0)}35%{opacity:1}100%{opacity:1;clip-path:inset(0 0 0 0)}}
-@keyframes sway{from{transform:rotate(-1deg) translateX(-3px)}to{transform:rotate(1deg) translateX(3px)}}
+@keyframes sway{from{transform:rotate(-1.5deg) translateX(-4px)}to{transform:rotate(1.5deg) translateX(4px)}}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @keyframes inkIn{from{opacity:0;filter:blur(6px);transform:translateY(8px) scale(.98);letter-spacing:.04em}to{opacity:1;filter:blur(0);transform:none;letter-spacing:0}}
 @keyframes marquee{to{transform:translateX(-50%)}}
