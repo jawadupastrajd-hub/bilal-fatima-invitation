@@ -74,10 +74,15 @@ h2{font:500 clamp(25px,6.6vw,29px)/1.2 var(--serif);color:var(--espresso);letter
 }
 .cover-card{
   position:relative;width:100%;max-width:400px;padding:58px 26px 50px;text-align:center;
-  background:#fff;border:1px solid var(--gold-light);border-radius:4px;
+  background:#fff;border:9px solid var(--gold);border-radius:4px;
   box-shadow:0 30px 60px -32px rgba(48,37,42,.25),inset 0 0 0 7px #fff,inset 0 0 0 8px rgba(189,152,87,.35);
   animation:coverIn 1.2s var(--ease) both;
 }
+/* Thick gold frame: corners sit on the thin inner line, like the reference */
+.cover-card .corner{top:16px;left:16px}
+.cover-card .corner.tr{left:auto;right:16px}
+.cover-card .corner.bl{top:auto;bottom:16px}
+.cover-card .corner.br{top:auto;left:auto;right:16px;bottom:16px}
 .cover .kicker{margin-bottom:28px}
 .seal{
   width:86px;height:86px;margin:0 auto 26px;border-radius:50%;display:flex;align-items:center;justify-content:center;gap:7px;
